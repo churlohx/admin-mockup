@@ -18,7 +18,11 @@ elementsNGApp.config(['$routeProvider',
                 templateUrl : eConfig.ctx + 'js/views/admin/groups.html',
                 controller  : 'adminGroupsController'
             })
-            .when(eConfig.ctx + 'resources/:selectedUserId?', {
+            .when(eConfig.ctx + 'resources/:selectedUserID?', {
+                templateUrl : eConfig.ctx + 'js/views/admin/resources.html',
+                controller  : 'adminResourcesController'
+            })
+            .when(eConfig.ctx + 'resources/journal/:selectedJournalID?', {
                 templateUrl : eConfig.ctx + 'js/views/admin/resources.html',
                 controller  : 'adminResourcesController'
             })
