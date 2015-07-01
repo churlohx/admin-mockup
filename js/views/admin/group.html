@@ -1,0 +1,36 @@
+<div id="adminGroups" class="container-fluid">
+	<div><a href=".">Administration Dashboard</a> / <a href="#groups">Groups</a> / {{selectedGroup.name}}</div>
+	<H1>Group Details</H1>
+	<div class="cssLayout">
+		<fieldset>
+			<h2 class="proh2">Group Information</h2>
+			<div>
+				<label for="groupName">Group Name:</label>
+				<input type="text" size="35" class="text_" name="groupName" value="{{selectedGroup.name}}">
+				<div class="error" name="groupName"></div>
+			</div>
+			<div>
+				<label for="groupOwner">Owner:</label>
+				<input type="text" size="35" class="text_" name="groupOwner" value="{{selectedGroup.ownerName}}">
+				<div class="error" name="groupOwner"></div>
+			</div>
+			<div>
+				<label for="groupType">Type:</label>
+				<input type="text" size="35" class="text_" name="groupType" value="{{selectedGroup.type}}">
+				<div class="error" name="groupType"></div>
+			</div>
+			<div>
+				<label for="groupType">Member Count: </label><div style="padding: .4em 10px 0 0;">{{selectedGroup.members.length}}</div>
+			</div>
+			<div class="buttonRow"><a class="button" href="#"><span>Save</span></a></div>
+		</fieldset>
+		<fieldset ng-show="selectedGroup.type == 'System'">
+			<h2 class="proh2">Group permission policies</h2>
+			<div dx-data-grid="groupPermissionPolicyGridSettings"></div>
+		</fieldset>
+		<fieldset>
+			<h2 class="proh2">Group members</h2>
+			<div dx-data-grid="gridSettings"></div>
+		</fieldset>
+	</div>
+</div>

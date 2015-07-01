@@ -1,0 +1,79 @@
+<div id="adminUsers" class="container-fluid">
+	<div><a href=".">Administration Dashboard</a> / <a href="#users">Users</a> / {{selectedUser.fullname}}</div>
+	<H1>User Details</H1>
+	<div id="viewPaneContent" class="pages workspace"><div class="settingsWrapper elements_user_profile_controller">
+		<form id="userProfileForm" class="cssLayout" method="POST" enctype="multipart/form-data">
+			<fieldset>
+				<h2 class="proh2">About user</h2>
+				<div name="proImgDiv" id="proImgDiv" class="proImg">
+					<img name="profilepic" id="profilepic" src="img/team/user.png" class="proImgSrc">
+				</div>
+				<div class="proAbt">
+					<label class="proAbtFld" for="fullName">Full Name:</label>
+					<input type="text" size="25" class="required text_" name="firstName" id="firstName" value="{{selectedUser.fullname}}">
+					<div class="error" name="fullName"></div>
+
+					<label class="proAbtFld" for="organization">Organization:</label>
+					<input type="text" size="25" class="required text_" name="organization" id="organization" value="">
+					<div class="error" name="organization"></div>
+
+					<label class="proAbtFld" for="emailAddress">Email Address:</label>
+					<div class="proEmail">{{selectedUser.username}}</div>
+					<div class="error" name="emailAddress"></div>
+				</div>
+				<!--div class="uploadPhoto1">
+					<div class="uploadPhoto2">
+						<input type="file" accept="image/gif, image/jpeg, image/png" class="uploadPhoto3">
+					</div>
+					<input type="file" onchange="document.getElementById('profilepic').src = 'img/team/user_load.png'" accept="image/gif, image/jpeg, image/png" name="picture" class="uploadPhoto4">
+					<span class="error" name="picture"></span>
+				</div-->
+			</fieldset>
+			<fieldset>
+				<h2 class="proh2">Contact info</h2>
+				<div class="proInfo">
+					<label for="address">Address:</label>
+					<textarea cols="40" rows="5" class="text_" name="address"></textarea>
+					<div class="error" name="address"></div>
+				</div>
+				<div>
+					<label for="phoneNumber">Phone Number:</label>
+					<input type="text" class="text_" name="phoneNumber" value="">
+					<div class="error" name="phoneNumber"></div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<h2 class="proh2">Interests &amp; expertise</h2>
+				<div class="proInfo">
+					<label for="department">Department:</label>
+					<input type="text" size="35" class="text_" name="department" value="">
+					<div class="error" name="department"></div>
+				</div>
+				<div>
+					<label for="projectTeam">Project Team:</label>
+					<input type="text" size="35" class="text_" name="projectTeam" value="">
+					<div class="error" name="projectTeam"></div>
+				</div>
+				<div>
+					<label for="areaOfStudy">Area of Study:</label>
+					<input type="text" size="35" class="text_" name="areaOfStudy" value="">
+					<div class="error" name="areaOfStudy"></div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<h2 class="proh2">User groups</h2>
+				<div dx-data-grid="gridSettings"></div>
+			</fieldset>
+			<fieldset>
+				<h2 class="proh2">User resources</h2>
+				<div class="proInfo">
+					Please click <a href="#resources/{{selectedUser.id}}">this link</a> to open Resource Administration for this user.
+				</div>
+			</fieldset>
+			<div class="buttonRow">
+				<a class="saveProfile button" href="#"><span>Save</span></a>
+				<a class="cancelProfileChanges textButton secondary">Cancel</a>
+			</div>
+		</form>
+	</div></div>
+</div>

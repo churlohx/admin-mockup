@@ -1,0 +1,21 @@
+/* This file contains Angular GlobalMenu Styling related css defined by Perkinelmer. */
+.ngGlobalMenu a, .ngGlobalMenu a:hover {
+  text-decoration: none;
+  font-family: Calibri !important;	
+}
+.ngGlobalMenu .dropdown-toggle {
+  padding: 3px 10px;
+  display:block;
+  border: 1px solid transparent;
+}
+.ngGlobalMenu .dropdown-toggle:hover {
+	border: 1px solid #c1c1c1;
+	background-color: #f3f3f3;
+	background-image: -moz-linear-gradient( top, #fff, #fff 20%, #efefef 90%, #ddd);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#fff), color-stop(20%, #fff), color-stop(90%, #e1e1e1), to(#ccc));
+	text-shadow: 0 1px 0 #fff;
+}
+.ngGlobalMenu .noDropdown {
+	height:22px;
+	padding-top: 3px;
+}

@@ -1,0 +1,42 @@
+/* This file contains ChemSearch related css defined by Perkinelmer. */
+#queryContainer {
+	margin-top:10px;
+	margin-bottom:10px;
+	font-family: Calibri !important;
+}
+#ccw {
+	border:1px solid #000;
+}
+#queryContainer form {
+	margin:0;
+	padding:0;
+}
+#queryContainer .tab-pane {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#queryContainer .alert {
+	margin:10px 0;
+}
+#queryContainer .filters .row {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.filters .col-xs-9 {
+	padding-left:0;
+}
+.filters label {
+	padding-top:10px;
+}
+.searchResults th {
+	text-align: left;
+    background: #ecedee;
+    background-image: -moz-linear-gradient( top, #fdfeff, #ecedee);
+    background-image: -webkit-gradient(linear, center top, center bottom, from(#fdfeff), to(#ecedee));
+}
+.reactionCell {
+	padding: 2px !important;
+}
+.reactionCell .CDW_Logo {
+	display:none;
+}

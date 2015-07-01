@@ -1,0 +1,198 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--[if IE]> <html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js ie"><![endif]-->
+<!--[if !IE]><!--> <html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="no-js"><!--<![endif]-->
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<title>Administration - PerkinElmer Elements</title>
+
+	<link rel="SHORTCUT ICON" href="favicon.ico" />
+
+	<!-- Bootstrap -->
+	<link rel='stylesheet' href='css/bootstrap-3.3.2/css/bootstrap.min.css' media='all' type='text/css' media='all' charset='utf-8' />
+	<link rel='stylesheet' href='css/bootstrap-3.3.2/css/bootstrap-theme.min.css' media='all' type='text/css' media='all' charset='utf-8' />
+	
+	<!-- Elements Style -->
+	<link rel='stylesheet' href='css/reset.css' media='all' type='text/css' media='all' charset='utf-8' />
+	<link rel='stylesheet' href='css/base.css' media='all' type='text/css' media='all' charset='utf-8' />	
+
+	<link rel='stylesheet' href='css/nglayout.css' media='all' type='text/css' media='all' charset='utf-8' />
+	
+	<!-- jQuery -->
+	<script type='text/javascript' src='js/resources/jquery/jquery.js'></script>
+
+	<!-- Angular -->
+	<script type='text/javascript' src='js/resources/angular/angular.min.js'></script>
+	<script type='text/javascript' src='js/resources/angular/angular-route.min.js'></script>
+	<script type='text/javascript' src='js/resources/angular/angular-sanitize.min.js'></script>
+	<script type='text/javascript' src='js/resources/angular/ui-bootstrap-tpls-0.12.1.min.js'></script>	
+
+	<!-- DevExtreme -->
+	<script type='text/javascript' src='js/resources/jquery/globalize/globalize.js'></script>
+    <script type='text/javascript' src='js/resources/dx/dx.webappjs.debug.js'></script>
+    <link rel='stylesheet' href='css/dx/dx.common.css' />
+    <link rel='stylesheet' href='css/dx/dx.light.css' />
+	<!--script>
+		var jq1102 = jQuery.noConflict();
+	</script-->
+	
+	<script type='text/javascript'>
+	var eConfig = {
+		debug: true,
+		ctx: '/',
+		ctxResource: '',
+		ctxAjax: 'ajax/',
+		currentGrailsEnvironment: 'PRODUCTION',
+		testMode: false,
+		disableTours: false
+	};
+	</script>
+	
+	<!-- Elements -->
+	<!--
+	<script type='text/javascript' src='js/resources/spreadJS/jquery-1.9.1.js'></script>
+	<script type='text/javascript' src='js/resources/jquery/jquery-migrate-1.2.1.js'></script>
+	<script type='text/javascript' src='js/jmvc/include.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/lang/init.js'></script>	
+	<script type='text/javascript' src='js/jmvc/plugins/lang/json/init.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/lang/class/init.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/model/simple_store.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/model/model.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/model/validation/model_validation.js'></script>
+	
+	<script type='text/javascript' src='js/jmvc/plugins/lang/openajax/init.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/lang/inflector/inflector.js'></script>
+	<script type='text/javascript' src='js/jmvc/plugins/controller/controller.js'></script>
+
+	<script type='text/javascript' src='js/resources/model.js'></script>
+	<script type='text/javascript' src='js/resources/controller.js'></script>	
+	<script type='text/javascript' src='js/models/responsestatuscodes.js'></script>
+	<script type='text/javascript' src='js/models/chemistry_webservice.js'></script>	
+	<script type='text/javascript' src='js/models/document_type.js'></script>		
+	
+	<script type='text/javascript' src='js/resources/jquery/jquery.cddAjax.js'></script>
+	<script type='text/javascript' src='js/resources/ChemDrawWeb/chemdrawweb/ChemdrawWebManager.js'></script>
+	<script type='text/javascript'>
+	window.chemdrawLoaded =  function() {
+		perkinelmer.ChemdrawWebManager.chemdrawLoaded();
+	};
+	</script>
+	<script type='text/javascript' src='js/resources/ChemDrawWeb/chemdrawweb/chemdrawweb.nocache.js'></script>
+	<script type='text/javascript' src='js/models/statemachine.js'></script>
+	-->
+	
+	<script type='text/javascript' src='js/apps/elementsNgApp.js'></script>
+
+	<meta name="layout" content="nglayout"/>
+	<link rel='stylesheet' href='css/admin.css' media='all' type='text/css' media='all' charset='utf-8' />	
+	<script type='text/javascript' src='js/controllers/admin-dashboard-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-user-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-users-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-group-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-groups-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-resources-controller.js'></script>
+	<script type='text/javascript' src='js/controllers/admin-features-controller.js'></script>
+	<style>
+	body{min-width:100%;}
+	</style>
+	<script type='text/javascript' src='js/resources/data.js'></script>
+</head>
+<body class="" onload="" ng-app="elementsNGApp">
+	<div id="hd">
+		<div id="globalMenu" class="nagGlobalMenu">
+			<div id="globalMenuWrap">
+				<div id="accountMenu" class="loggedIn ">
+					<ul>
+						<li class="first">
+							<span class="dropdown" dropdown>
+								<a href class="dropdown-toggle" dropdown-toggle><span class="userFullName">Site Administrator</span> <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="/userSettings/show#user_profile"><div class="name">Edit Profile</div></a></li>
+									<li><a href="/userSettings/show#preferences"><div class="name">Edit Preferences</div></a></li>
+									<li><a href="/userSettings/show#account_billing"><div class="name">Account/Billing</div></a></li>
+									<li><a href="/userSettings/show#change_password"><div class="name">Change Password</div></a></li>
+									<li><a href="/userSettings/show#groups"><div class="name">Groups</div></a></li>
+								</ul>
+							</span>
+						</li>												
+						<li>
+							<span class="dropdown" dropdown>
+								<a href class="dropdown-toggle" dropdown-toggle><span>Help</span> <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a id="btnPageTour" href="#">Welcome Tour</a></li>
+									<li><a id="btnJournalTour" href="#">Notebook Tour</a></li>
+									<li><a id="btnExperimentTour" href="#">Experiment Tour</a></li>
+									<li><a id="btnSystemBroadcast" href="#">Elements News</a></li>
+									<li><a id="btnSystemAlert" href="#">System Alert</a></li>
+									<li><a id="btnFAQ" target="_blank" href="http://www.cambridgesoft.com/support/EnterpriseSupport/KnowledgeBase/FAQ/?fid=249">FAQ</a></li>
+									<li><a id="btnContactSupport" target="_blank" href="http://www.cambridgesoft.com/contact/support/form/">Contact Support</a></li>
+								</ul>
+							</span>
+						</li>					   	
+						
+						<li class="noDropdown"><a href="#" class="btnSignOut">Sign Out</a></li>
+					</ul>
+				</div><!-- #accountMenu -->
+			</div>
+		</div><!-- #globalMenu -->
+		<div id="masthead">
+			<a href="#">
+				<img src="img/logos/elements_logo.png" class="logo" />
+			</a>
+		</div><!-- #mastHead -->
+	</div><!-- #hd -->
+	<div class='workspace'>
+		<div id="bd" class="app">
+			<div id="navPane" class='userSettings'>	
+				<div id="navPaneControls" class="settingsNavPane">
+					<a class="setting" href=".">Admininstration Dashboard</a>
+					<a class="btnHideAtlas" title="Hide navigation">&laquo;</a>
+				</div> 
+
+				<div id="navList">
+					<div id="navTop">
+						<div id="navTopWrap">
+							<ul class='navPages'>
+								<li><a class="setting" href="#users">Users</a></li>
+								<li><a class="setting" href="#groups">Groups</a></li>
+								<li><a class="setting" href="#resources">Resources</a></li>
+								<li><a class="setting" href="#features">Features</a></li>
+							</ul>
+						</div>
+					</div><!-- #navTop -->
+				</div><!-- #navList -->
+			</div><!-- #navPane -->
+
+			<div id="viewPane" >
+				<div id="viewPaneWrap">
+					<ng-view></ng-view>
+				</div><!-- end #viewPaneWrap -->
+			</div><!-- end #viewPane .workspace -->
+		</div><!-- end .bd -->
+		<div id="tooltip" class="tooltipcontainer">
+			<div class="tooltiptitle"></div>
+			<div class="tooltipdescription"></div>
+		</div>
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TCRP6W"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TCRP6W');</script>
+		<div id="ftWrapper">
+			<div id="ft">
+				<div class="ftNav">
+					<ul>
+						<li class="first"><a href="http://www.cambridgesoft.com/contact/corporate/" style="text-decoration:underline">Contact Us</a></li>
+						<li>Version 3.1 (588023)</li>
+						<li>Copyright 1998-2015 CambridgeSoft Corporation. All rights reserved.</li>
+						<li><a href="/2.0/img/pdfs/SLA.htm" target="_blank" style="text-decoration:underline">SLA</a></li>
+						<li><a href="http://www.perkinelmer.com/" target="_blank" style="text-decoration:underline">PKI</a></li>
+					</ul>
+				<div>
+			</div>
+		</div>
+	</body>
+</html>

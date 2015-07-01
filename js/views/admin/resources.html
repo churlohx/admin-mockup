@@ -1,0 +1,5 @@
+<div id="adminFeatures" class="container-fluid">
+	<div><a href=".">Administration Dashboard</a> / <a href="#resources" ng-show="selectedUser != null">Resources</a>{{selectedUser ? (' / ' + selectedUser.fullname) : 'Resources'}}</div>
+	<H1>Resource Administration: Journals</H1>
+	<div dx-data-grid="gridSettings"></div>
+</div>
