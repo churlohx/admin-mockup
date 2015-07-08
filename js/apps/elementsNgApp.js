@@ -22,9 +22,9 @@ elementsNGApp.config(['$routeProvider',
                 templateUrl : eConfig.ctx + 'js/views/admin/resources.html',
                 controller  : 'adminResourcesController'
             })
-            .when(eConfig.ctx + 'resources/journal/:selectedJournalID?', {
-                templateUrl : eConfig.ctx + 'js/views/admin/resources.html',
-                controller  : 'adminResourcesController'
+            .when(eConfig.ctx + 'resources/resource/:selectedResourceID?', {
+                templateUrl : eConfig.ctx + 'js/views/admin/resource.html',
+                controller  : 'adminResourceController'
             })
             .when(eConfig.ctx + 'features', {
                 templateUrl : eConfig.ctx + 'js/views/admin/features.html',
@@ -59,4 +59,12 @@ elementsNGApp.run(function($rootScope) {
 	$rootScope.hideSpinner = function() {
 		angular.element('.mode.large-spinner').remove();
 	}
+});
+
+elementsNGApp.filter('capitalize', function() {
+  return function(input, scope) {
+    if (input!=null)
+    input = input.toLowerCase();
+    return input.substring(0,1).toUpperCase()+input.substring(1);
+  }
 });

@@ -175,3 +175,19 @@ journals = [
         "id": "3aa9324b-a504-4dba-b58d-902a43a48709", "ownerId": 27,"ownerName":"Koel Misra", "name": "z", "uri": "wingu.com:journal:3aa9324b-a504-4dba-b58d-902a43a48709", "childrenLoaded": true, "documentType": { "namespace": "wingu.com", "type": "journal", "updatable": true }, "children": [{ "id": "c1c2f35f-3bbe-4e0f-99db-11e94ca65d72", "name": "z-1", "uri": "wingu.com:experiment:c1c2f35f-3bbe-4e0f-99db-11e94ca65d72", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "d98a56c7-84ab-406b-b6b9-3f96a37e6d0d", "name": "z-10", "uri": "wingu.com:experiment:d98a56c7-84ab-406b-b6b9-3f96a37e6d0d", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "6c1fdef6-2faa-4234-91f2-c31e7f799127", "name": "z-11", "uri": "wingu.com:experiment:6c1fdef6-2faa-4234-91f2-c31e7f799127", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "f81b0062-ad38-4766-a284-25d26cf3a6cb", "name": "Z-2", "uri": "wingu.com:experiment:f81b0062-ad38-4766-a284-25d26cf3a6cb", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "3da255e7-813c-456e-9c94-e46d958cf9fd", "name": "Z-3", "uri": "wingu.com:experiment:3da255e7-813c-456e-9c94-e46d958cf9fd", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "dd1f3717-930a-45d6-a58b-e65ae7799574", "name": "Z-4", "uri": "wingu.com:experiment:dd1f3717-930a-45d6-a58b-e65ae7799574", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }, { "id": "3a24ee54-e655-4cc8-9541-d19b5da52769", "name": "Z-5", "uri": "wingu.com:experiment:3a24ee54-e655-4cc8-9541-d19b5da52769", "childrenLoaded": false, "documentType": { "namespace": "wingu.com", "type": "experiment", "updatable": true }, "children": [] }]
     }
 ];
+permissions = [
+    {
+        "statusCode":1,
+        "status":1,
+        "data":{
+            "groupsNotShared":[
+                {"id":1362,"name":"PKI Sales","type":"NORMAL","memberCount":188}
+            ],
+            "currentUser":"churl.oh@perkinelmer.com",
+            "isPublic":false,
+            "groupsToPermissions":[
+                {"id":202,"name":"churl.oh@perkinelmer.com","permission":"Is Owner","type":"IDENTITY","memberCount":""}
+            ]
+        }
+    }
+];

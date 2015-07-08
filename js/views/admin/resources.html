@@ -1,5 +1,5 @@
 <div id="adminFeatures" class="container-fluid">
-	<div><a href=".">Administration Dashboard</a> / <a href="#resources" ng-show="selectedUser != null || selectedJournal != null">Journals</a>{{selectedUser ? (' / ' + selectedUser.fullname) : (selectedJournal ? ' / ' + selectedJournal.name : 'Journals')}}</div>
-	<H1>Resource Administration: {{selectedJournal == null ? 'Journals' : selectedJournal.name}}</H1>
+	<div><a href=".">Administration Dashboard</a> / <a href="#resources" ng-show="selectedUser != null || selectedResource != null">Journals</a>{{selectedUser ? (' / ' + selectedUser.fullname) : (selectedResource ? ' / ' + selectedResource.name : 'Journals')}}</div>
+	<H1>Resource Administration: {{selectedResource == null ? 'Journals' : selectedResource.name}}</H1>
 	<div dx-data-grid="gridSettings"></div>
 </div>

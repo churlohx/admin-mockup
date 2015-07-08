@@ -1,0 +1,36 @@
+<div id="adminFeatures" class="container-fluid">
+	<div><a href=".">Administration Dashboard</a> / <a href="#resources" ng-show="selectedUser != null || selectedResource != null">Journals</a>{{selectedUser ? (' / ' + selectedUser.fullname) : (selectedResource ? ' / ' + selectedResource.name : 'Journals')}}</div>
+	<H1>Resource Administration: {{selectedResource == null ? 'Journals' : selectedResource.name}}</H1>
+	<div class="cssLayout">
+		<fieldset>
+			<h2 class="proh2">Resource Information</h2>
+			<div>
+				<label for="resourceName">Resource Name:</label>
+				<input type="text" size="35" class="text_" name="groupName" value="{{selectedResource.name}}">
+				<div class="error" name="resourceName"></div>
+			</div>
+			<div>
+				<label for="resourceOwner">Owner:</label>
+				<input type="text" size="35" class="text_" name="resourceOwner" value="{{selectedResource.ownerName}}">
+				<div class="error" name="resourceOwner"></div>
+			</div>
+			<div>
+				<label for="groupType">Resource Type:</label>
+				<input type="text" size="35" class="text_" name="groupType" value="{{selectedResource.documentType.type | capitalize}}">
+				<div class="error" name="groupType"></div>
+			</div>
+			<!--div>
+				<label for="groupType">Member Count: </label><div style="padding: .4em 10px 0 0;">{{selectedGroup.members.length}}</div>
+			</div>
+			<div class="buttonRow"><a class="button" href="#"><span>Save</span></a></div-->
+		</fieldset>
+		<fieldset>
+			<h2 class="proh2">Permissions</h2>
+			<!--div dx-data-grid="groupPermissionPolicyGridSettings"></div-->
+		</fieldset>
+		<fieldset>
+			<h2 class="proh2">Child documents</h2>
+			<div dx-data-grid="gridSettings"></div>
+		</fieldset>
+	</div>
+</div>
