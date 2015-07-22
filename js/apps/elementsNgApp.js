@@ -6,6 +6,14 @@ elementsNGApp.config(['$routeProvider',
                 templateUrl : eConfig.ctx + 'js/views/admin/user.html',
                 controller  : 'adminUserController'
             })
+            .when(eConfig.ctx + 'roles', {
+                templateUrl : eConfig.ctx + 'js/views/admin/roles.html',
+                controller  : 'adminRolesController'
+            })
+            .when(eConfig.ctx + 'role/:selectedRoleID', {
+                templateUrl : eConfig.ctx + 'js/views/admin/role.html',
+                controller  : 'adminRoleController'
+            })
             .when(eConfig.ctx + 'users', {
                 templateUrl : eConfig.ctx + 'js/views/admin/users.html',
                 controller  : 'adminUsersController'

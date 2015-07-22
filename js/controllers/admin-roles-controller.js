@@ -1,16 +1,16 @@
-angular.module('elementsNGApp').controller('adminGroupsController', function($scope, $http, $timeout) {
+angular.module('elementsNGApp').controller('adminRolesController', function($scope, $http, $timeout) {
 	$scope.contextPath = eConfig.ctx;
-	$scope.groups = groups.filter(function(val, index, array) { return val.type == 'Normal'; });
+	$scope.groups = groups.filter(function(val, index, array) { return val.type == 'System'; });
 	$scope.gridSettings = {
 		dataSource: $scope.groups,
 		columns: [
 			{ dataField: 'id', caption: 'ID', alignment: 'left', width: 60, sortIndex: 0, sortOrder: 'asc' },
 			{
 				dataField: 'name',
-				caption: 'Group Name',
+				caption: 'Role Name',
 				cellTemplate: function (container, options) {
                     $('<a/>').addClass('dx-link')
-                    	.attr('href', '#group/' + options.data['id'])
+                    	.attr('href', '#role/' + options.data['id'])
                         .text(options.value)
                         .appendTo(container);
                 }
